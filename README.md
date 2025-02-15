@@ -1,61 +1,66 @@
-# 🚀 Getting started with Strapi
+# Chat App - Backend (Strapi)
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+This is the backend of the **Chat App**, built using **Strapi**. It provides APIs for user authentication, real-time messaging, and data storage. The backend is connected to a **PostgreSQL** database and deployed on **Render**.
 
-### `develop`
+## 🌐 Deployed Backend URL
+[https://chatingapp-frontend.onrender.com](https://chatingapp-frontend.onrender.com)
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+Deployed Application URL
 
-```
-npm run develop
-# or
-yarn develop
-```
 
-### `start`
+## 🚀 Frontend Repository
+[Chat App - Frontend GitHub Repository](https://github.com/Hirenachhaada/chatingapp-frontend)
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+## 📅 Deployment Date
+Deployed on **February 15, 2025**.
 
-```
-npm run start
-# or
-yarn start
-```
+## ⚠️ PostgreSQL Database Limitation on Render
+Render offers only **2 days of free PostgreSQL database** usage. After this period, the database may **stop working**, affecting backend functionality. You may need to switch to another database provider or upgrade your Render plan.
 
-### `build`
+## 🛠️ Tech Stack
+- **Strapi** (Headless CMS)
+- **PostgreSQL** (Database)
+- **WebSockets** (for real-time communication)
+- **Render** (Hosting platform)
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+## 🚀 How to Run Locally
 
-```
-npm run build
-# or
-yarn build
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/chatingapp-backend.git
+   cd chatingapp-backend
+   ```
 
-## ⚙️ Deployment
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+3. Set up environment variables in a `.env` file:
+   ```env
+   DATABASE_CLIENT=postgres
+   DATABASE_HOST=your_database_host
+   DATABASE_PORT=5432
+   DATABASE_NAME=your_database_name
+   DATABASE_USERNAME=your_database_username
+   DATABASE_PASSWORD=your_database_password
+   DATABASE_URL=your_render_database_url
+   ```
+   
+4. Start the Strapi backend:
+   ```bash
+   npm run develop
+   ```
 
-```
-yarn strapi deploy
-```
+## 📌 API Endpoints
+- **User Authentication**: `/auth/local` (Login), `/auth/local/register` (Signup)
+- **Messaging**: `/messages`
+- **User Management**: `/users`
 
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+## 📞 WebSocket Integration
+The backend supports **WebSockets** for real-time messaging, ensuring smooth chat interactions.
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+🔹 Feel free to contribute or report any issues! 🚀
+```
